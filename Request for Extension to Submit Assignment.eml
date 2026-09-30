@@ -1,0 +1,154 @@
+Delivered-To: kavyasomishetti@gmail.com
+Received: by 2002:ab2:7113:0:b0:32f:9b33:4a9f with SMTP id z19csp355763lql;
+        Tue, 29 Sep 2026 20:13:04 -0700 (PDT)
+X-Received: by 2002:a17:907:7b8e:b0:c29:f51b:f75 with SMTP id a640c23a62f3a-c2e1581462amr109703466b.23.1790737984538;
+        Tue, 29 Sep 2026 20:13:04 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1790737984; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=F2qEmVKpWKtnWiJW749ruJaVmygj9zMVv7oSvIrPHX7txcOkv33xGiU0gJ/PwkQNq0
+         Q/i+uafVBpigNMsHgqDj5yiZqlCd8NRIgnteUDLU0vxPkz2ZN/YIUUqUpZUl91jLlTfn
+         nGfOqjyB036hfrVMHDvCM1teYlb9xnAdtM+hc62S9zEeDeKm2MIDf19q7mTn06RSthxQ
+         CZdz5oQ0HSSEDcqXj7zEDtfdzpQBKf3B7cp12bf2bP1uLaZ7K6D00Ft3LJ+b6cP/LOou
+         SBRnr2jbmYuQBkYbmpG8RejNuxODiw89e4AlYrIXHY6GzwMMkUBTqBQslI5H98/YAH0d
+         fWSA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=QmzFcqgmoqUzc6PMnSkaAhO0M5ATutlAXa+xSCoVmmA=;
+        fh=qPZ0H49Nj2vx/ZVn0qfw5Y3P52v4Bq5u/YwmXvafcEI=;
+        b=ktnXaHQrtFfDxehcL0BAgXc7HDNqImGXcYQMd/BfcGKnDibVkZUctPchvrVya/IF3A
+         ay2S+GODoBT70MR0yJe8nj+QVA8UyBqAP5OqfzN9402MFD/o9+ogA/G9VGeMEJZ3G3Jr
+         6lHIK+C7AfGwyzIePAR6r/kHafqYtINYb9GixPCESJ71ZEl+EIK6BfDdfejJli/pudww
+         Gfxf5Ql3Cr/whVR4mnkd9EbJ1e3mUdjModcBn9K5DFCOgzj8FfZvoi6pJJi7JcZp/1kT
+         pNguqYfA3LzzU6KZM6JDIubwEPTpsbkF/UjAohGX1h3JmFlrm5j2GAxWLRnl9SwVW/rr
+         OJTg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@klh.edu.in header.s=google header.b=hW8cZYbd;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of nomulaswathika@klh.edu.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=nomulaswathika@klh.edu.in;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=klh.edu.in;
+       dara=pass header.i=@gmail.com
+Return-Path: <nomulaswathika@klh.edu.in>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-6ae047e56f4sor131043a12.2.2026.09.29.20.13.04
+        for <kavyasomishetti@gmail.com>
+        (Google Transport Security);
+        Tue, 29 Sep 2026 20:13:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of nomulaswathika@klh.edu.in designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@klh.edu.in header.s=google header.b=hW8cZYbd;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of nomulaswathika@klh.edu.in designates 209.85.220.41 as permitted sender) smtp.mailfrom=nomulaswathika@klh.edu.in;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=klh.edu.in;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1790737984; cv=none;
+        d=google.com; s=arc-20260327;
+        b=TZOesJVSG47+qOmdvYgk8eiYVr3IPMU2BucHFE9JgkwD+s24t2Ir/hnhTCPemfgfC6
+         m/Va0KAp/mBz2vDwAEp54u19yU+ooWUSEAG8RGxpgl48nxytuaL+FzPRq61gacPSr6ln
+         uo2IgPiCkspX+2rr9ZcAvA/+Jz21Dhz4WVm2C2BFgONMD1ZdikaQwH3y5zgU0+oVEoum
+         yrlqhNFUkiVM6tB3KOU49k7Lv0diHTSwvta2zYtJtRLHv38sr1kSZ0StM8Qrsf9jQ3Ns
+         vMIFpJo4UPbicEpmspXJaIQ9S+3xpZdQBIdiKIyleqeI7PTixh0tTCoGOfxxbYStsvCm
+         Syzg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=QmzFcqgmoqUzc6PMnSkaAhO0M5ATutlAXa+xSCoVmmA=;
+        fh=qPZ0H49Nj2vx/ZVn0qfw5Y3P52v4Bq5u/YwmXvafcEI=;
+        b=BvptkQF5i3jqatlXVtC7r/1TWwvhV6GDtN3nDpqqc3Wfd9tVpO4bbrXmqTA6OlxUEC
+         m5fNKR+Fo2Jx5GrY75RjV8LTMG54dMzspG03yqtELhICV/lmWrLJFAzO6w8vKLqmwodm
+         L4xguwXqMJGR1XNSGLoCiTkVvsl7wZQvM5Df9SZLuJyQuxyX1p1der2JMY+BwBUp3zHX
+         vwW+3DXxUNUhDFb5SHrnvCncJ1K/ioPwgj7GeZmNfeten3Ku70HbFdKUsr3sDqgb0T8e
+         Zs+lKGzm9V0sZrLWF4TZSatjQo5ElmNC3xYvKHNkA+iHMFQSJy/PRz9rGWEICEMMidnl
+         jafg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=klh.edu.in; s=google; t=1790737984; x=1791342784; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=QmzFcqgmoqUzc6PMnSkaAhO0M5ATutlAXa+xSCoVmmA=;
+        b=hW8cZYbdKB9ia+DZn2pqDRom9HTDcd3NXHEmLPfXhsUqY6dJoKsVDpda1SR8sZa2fX
+         ZUQFxf0R2RoaTAzjfPnvqQf95ZzZUrCsUB69IqY4j4etNkqOMDC99P6cpnKDS+XYNw4Q
+         vi2smUXLUxwUvSNfkiFFPneIc5C+EvDMfjx32dGM19fm4FfpucvuCm74ox3HsMA5llyc
+         wYsSJZWzYXD1yLajz/n22nPUASE7Grv9nbkIviyvBAlUkfLRNdVTXZCeh1xBZzibkAPq
+         PQcoYgJP+maF7CtjgsBCFCuHmOe1cC8n00cJET07/o/hWRgyfhAQAvPAFHXa2gJzD13T
+         uriw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1790737984; x=1791342784;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=QmzFcqgmoqUzc6PMnSkaAhO0M5ATutlAXa+xSCoVmmA=;
+        b=edmQKMc7FbqIVzIc1qnvwraC1dpa46I1QNyzPIUlIy9movetG/3F6S+zODK4CzioAX
+         7nEJlyZdVNxl+0ovsgMudSlgTMIfS+Rw3t1QT46RSww2LOvvN+KBtZ1ilbLH0MAVZfzY
+         TdJaeKd+4j6GBfN+znnLQHMEE7RG7hCrqqDhYJcVJdYFgd9+J+RUqlhCia7njPwmV0Z1
+         EAsnD+LeEleBlKx6BGZwYcMt6cwNIeVPRDo9PtcSHlH/vq38NNZx5skWNStWNheyE8mZ
+         J1QE/zIu+RiEM1shcQcpOtEnkUg0wpNa7x2e0W1BHBLAJKiCaowBawFoBgvECgMcBktb
+         10KA==
+X-Gm-Message-State: AFq9FYIFeuNFVilxzebZizg0mJhCxwHwn0t6JrSM6iQqb3XZRdEywcDX
+	Lr0qxfpW8G4QlwRh+6VcSpnGnuW1PasXtH8fHXffTcmobe9FVEoSGHWWGdt2LZCVhKS1dJoVov1
+	jLZ9yurMq2PG8AlKLGUFvyIBByBV+QaLyUiV5XyEcMnZWALRBeL+Ch0iPPyiZk0z8cAlrkpghQh
+	5AEqPicZgeDskyZAmshqJO4HdG1J4ljvAZkePAW999Q5895g==
+X-Gm-Gg: AYBFou1lQIQvqbddr5GGBxWxVdT3xnTJ9BWyDWRPg+DpxTKlYhsmhsKheE1++hkYvp7
+	Z56Df1278RO3TlSSuZZ5xT1NMa3v3xgtRi0ik1xvm/FFF/LhEpzCrQqbZ4qXKy10a7eobUa9/O7
+	GNrk5vmVWgzlqi/6yZZvNQycArTT3fN/0xWqar3BShqVWjfVVvzv56tCTNl86Tt5STfY3+b6SUb
+	fKRpJ4HHof8bHf9jThP3uWksA+0Tj7sOKp15T71LaDaSEl0m2SRakozmqtIbKG0cL24Cb1/yves
+	07w4LzpJhdsj8+VRpbzaRa9+3A4y3/8YUiKZ2R6Q2jN5VmapRDaDgDvwfA==
+X-Received: by 2002:a05:6402:400a:b0:6ac:5de8:ab5c with SMTP id
+ 4fb4d7f45d1cf-6ad4fd0e074mr580182a12.10.1790737984089; Tue, 29 Sep 2026
+ 20:13:04 -0700 (PDT)
+MIME-Version: 1.0
+From: "NOMULA SWATHIKA ." <nomulaswathika@klh.edu.in>
+Date: Wed, 30 Sep 2026 08:42:52 +0530
+X-Gm-Features: AclHuK8MjPrGryVUtBPODE2xUIxEnIh-EIm8TBTnWu0539zLJm1UQNR_tdokPIs
+Message-ID: <CAAQ33yt3B9ozMdF_MWtmaNGkju=0wY8unsryRq4pLV0fKXFC4A@mail.gmail.com>
+Subject: Request for Extension to Submit Assignment
+To: somishetti Kavya <kavyasomishetti@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000006d7c59065caaadce"
+
+--0000000000006d7c59065caaadce
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Professor,
+
+I hope you are doing well. I am writing to request a short extension for
+submitting the Assignment . Due to some unforeseen circumstances, I was
+unable to complete the assignment by the deadline. I sincerely apologize
+for not being able to submit it on time.
+
+I would be grateful if you could allow me a few additional days to complete
+and submit the assignment. I understand that the deadline is important, and
+I would really appreciate your consideration in this situation. I can
+submit the completed assignment in two days
+
+I assure you that I will make sure the assignment is completed properly and
+submitted within the extended time. Thank you for understanding my
+situation and considering my request.
+
+Best Regards,
+XXXXXXXX
+
+-- 
+
+
+www.klh.edu.in <http://www.klh.edu.in>
+
+--0000000000006d7c59065caaadce
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p>Dear Professor,</p><p>I hope you are doing well. I am w=
+riting to request a short extension for submitting the Assignment . Due to =
+some unforeseen circumstances, I was unable to complete the assignment by t=
+he deadline. I sincerely apologize for not being able to submit it on time.=
+</p><p>I would be grateful if you could allow me a few additional days to c=
+omplete and submit the assignment. I understand that the deadline is import=
+ant, and I would really appreciate your consideration in this situation. I =
+can submit the completed assignment in two days=C2=A0</p><p>I assure you th=
+at I will make sure the assignment is completed properly and submitted with=
+in the extended time. Thank you for understanding my situation and consider=
+ing my request.</p><p>Best Regards,<br>XXXXXXXX</p></div>
+
+<br>
+<div><br></div><a href=3D"http://www.klh.edu.in" target=3D"_blank">www.klh.=
+edu.in</a>
+--0000000000006d7c59065caaadce--
